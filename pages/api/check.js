@@ -3,7 +3,8 @@ const cheerio = require('cheerio')
 const axios = require('axios')
 
 export default function handler(req, res) {
-  lightshotImageExtractor('http://prntscr.com/dki21q').then((url) =>
+  const { url } = req.query
+  lightshotImageExtractor('https://prnt.sc/ucr6zz').then((url) =>
     res.status(200).json({ url })
   )
   return;
