@@ -4,7 +4,7 @@ const axios = require('axios')
 
 export default function handler(req, res) {
   const { url } = req.query
-  lightshotImageExtractor('https://prnt.sc/ucr6zz').then((url) =>
+  lightshotImageExtractor(url).then((url) =>
     res.status(200).json({ url })
   )
   return;
